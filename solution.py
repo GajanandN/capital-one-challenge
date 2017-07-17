@@ -11,7 +11,6 @@ start_time = time.time()
 df = pd.read_csv("subscription_report.csv", parse_dates = ['Transaction Date'])
 
 
-
 #For Annual revenue
 d = pd.DataFrame()
 d['year'] = df['Transaction Date'].dt.year
@@ -59,7 +58,6 @@ regr.fit(x, y)
 print "Predicted annual revenue for 2015: %d USD" % regr.predict(2015)
 
 
-
 #For Subscription ID, Subscription time and Subscription type
 df = df.drop('Amount (USD)', axis = 1)
 df = df.sort_values(by = ['Subscription ID', 'Transaction Date'])
@@ -104,7 +102,6 @@ t = t.drop('sub_onetime', axis = 1)
 #saving the output to your_list.csv file
 print "Saving subscription ids and type to subs_id_type.csv ..."
 t.to_csv('subs_id_type.csv')
-
 
 
 #runtime of the program
