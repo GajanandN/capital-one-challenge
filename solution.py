@@ -103,7 +103,7 @@ t.columns = ['Subscription time (days)', 'sub_onetime', 'Subscription type']
 t = t.drop('sub_onetime', axis = 1)
 #saving the output to your_list.csv file
 print "Saving subscription ids and type to subs_id_type.csv ..."
-t = t.to_csv('subs_id_type.csv')
+t.to_csv('subs_id_type.csv')
 
 
 
